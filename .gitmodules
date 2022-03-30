@@ -1,0 +1,3 @@
+[submodule "LibAI"]
+	path = LibAI
+	url = https://github.com/coscialp/LibAI.git
