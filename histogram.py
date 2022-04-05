@@ -1,10 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: UTF8 -*-
-"""This is a program will print the describe on dataset"""
+"""This is a program will print the histogram"""
 
 
 import os, sys
-from LibAI.libgraphics import Graphics
 
 
 """Add packages dir on pythonpath"""
@@ -12,8 +11,10 @@ fpath = os.path.join(os.path.dirname(__file__), 'LibAI')
 sys.path.append(fpath)
 
 
-from LibAI.libmath import Math, Stat
+from matplotlib import pyplot as plt
+from LibAI.libgraphics import Graphics
 from LibAI.libparser import CSV
+
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
@@ -39,5 +40,7 @@ if __name__ == '__main__':
     graph.hist(data_hufflepuff[0], '', c='yellow', a=0.5)
     graph.hist(data_ravenclaw[0], '', c='blue', a=0.5)
     graph.hist(data_slytherin[0], '', c='green', a=0.5)
+
+    plt.legend(['Grynffindor', 'Hufflepuff', 'Ravenclaw', 'Slytherin'])
 
     graph.show()
