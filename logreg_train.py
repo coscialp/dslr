@@ -85,14 +85,3 @@ if __name__ == '__main__':
             np.save(file, W)
             np.save(file, b)
 
-    # with open('theta.npy', 'rb') as file:
-    #     mn = np.load(file)
-    #     mx = np.load(file)
-    #     print(f'mn = {mn}\nmx = {mx}')
-    #     for i in range(4):
-    #         W = np.load(file)
-    #         b = np.load(file)
-    #         print(f'W = {W}')
-    #         print(f'b = {b}')
-    #         print('-------------------------')
-
