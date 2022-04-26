@@ -72,15 +72,15 @@ if __name__ == '__main__':
 
     for data in dataset:
         if Math.isfloat(data['data'][0]) and data['name'] != 'Index' and data['name'] != 'Hogwarts House':
-            describe['title'] += '%*s |' % (len(data['name'])+ 4, data['name'])
-            describe['count'] += '%*d |' % (len(data['name'])+ 4, Stat.count(data['data']))
-            describe['mean'] += '%*.3f |' % (len(data['name'])+ 4, Stat.mean(data['data']))
-            describe['std'] += '%*.3f |' % (len(data['name'])+ 4, Stat.std(data['data']))
-            describe['min'] += '%*.3f |' % (len(data['name'])+ 4, Stat.min(data['data']))
-            describe['max'] += '%*.3f |' % (len(data['name'])+ 4, Stat.max(data['data']))
-            describe['25%'] += '%*.3f |' % (len(data['name'])+ 4, Stat.percentiles(data['data'], 25))
-            describe['75%'] += '%*.3f |' % (len(data['name'])+ 4, Stat.percentiles(data['data'], 75))
-            describe['50%'] += '%*.3f |' % (len(data['name'])+ 4, Stat.median(data['data']))
+            describe['title'] += '%*s |' % (len(data['name'])+ 3, data['name'])
+            describe['count'] += '%*d |' % (len(data['name'])+ 3, Stat.count(data['data']))
+            describe['mean'] += '%*.3f |' % (len(data['name'])+ 3, Stat.mean(data['data']))
+            describe['std'] += '%*.3f |' % (len(data['name'])+ 3, Stat.std(data['data']))
+            describe['min'] += '%*.3f |' % (len(data['name'])+ 3, Stat.min(data['data']))
+            describe['max'] += '%*.3f |' % (len(data['name'])+ 3, Stat.max(data['data']))
+            describe['25%'] += '%*.3f |' % (len(data['name'])+ 3, Stat.percentiles(data['data'], 25))
+            describe['75%'] += '%*.3f |' % (len(data['name'])+ 3, Stat.percentiles(data['data'], 75))
+            describe['50%'] += '%*.3f |' % (len(data['name'])+ 3, Stat.median(data['data']))
 
 
     print_all(describe)
