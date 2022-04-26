@@ -81,7 +81,7 @@ if __name__ == '__main__':
         X[: , i] = np.nan_to_num(X[: , i], Stat.mean(X[:, i]))
 
     y = Algorithm.predict_one_for_all(X, theta, 4)
-    with open('house.csv', 'w') as file:
+    with open('houses.csv', 'w') as file:
         file.writelines('Index,Hogwarts House\n')
         for i, data in enumerate(y):
             house = ''

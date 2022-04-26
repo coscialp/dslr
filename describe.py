@@ -71,7 +71,7 @@ if __name__ == '__main__':
         }
 
     for data in dataset:
-        if Math.isfloat(data['data'][0]) and data['name'] != 'Index':
+        if Math.isfloat(data['data'][0]) and data['name'] != 'Index' and data['name'] != 'Hogwarts House':
             describe['title'] += '%*s |' % (len(data['name'])+ 4, data['name'])
             describe['count'] += '%*d |' % (len(data['name'])+ 4, Stat.count(data['data']))
             describe['mean'] += '%*.3f |' % (len(data['name'])+ 4, Stat.mean(data['data']))

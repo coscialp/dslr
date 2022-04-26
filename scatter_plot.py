@@ -17,7 +17,7 @@ from LibAI.libparser import CSV
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2 or len(sys.argv) != 4:
+    if len(sys.argv) != 2 and len(sys.argv) != 4:
         print('Wrong number of arguments!\nUsage:\tpython3 describe.py [PATH OF CSV] [NAME OF X AXIS] [NAME OF Y AXIS]', file=sys.stderr)
         exit(1)
 
